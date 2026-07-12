@@ -1,0 +1,66 @@
+/* =========================
+   メインビジュアル
+========================= */
+
+.main-visual {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 650px;
+  padding: 80px 8%;
+  color: #fff;
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4)
+    ),
+    url("../images/main-visual.jpg") center / cover no-repeat;
+}
+
+.main-visual-text {
+  max-width: 700px;
+}
+
+.main-visual-text > p {
+  margin-bottom: 18px;
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 4px;
+}
+
+.main-visual h1 {
+  margin-bottom: 40px;
+  font-size: 52px;
+  line-height: 1.5;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.main-visual a {
+  display: inline-block;
+  padding: 15px 38px;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  background-color: #244f54;
+  border: 1px solid #fff;
+  transition:
+    color 0.3s,
+    background-color 0.3s;
+}
+
+.main-visual a:hover {
+  color: #244f54;
+  background-color: #fff;
+}
+
+/* スマートフォン */
+@media screen and (max-width: 768px) {
+  .main-visual {
+    min-height: 520px;
+    padding: 60px 25px;
+  }
+
+  .main-visual h1 {
+    font-size: 34px;
+  }
+}
