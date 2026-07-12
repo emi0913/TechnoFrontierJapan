@@ -1,0 +1,75 @@
+/* =========================
+  会社概要
+========================= */
+
+.company-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.company-table th,
+.company-table td {
+  padding: 18px;
+  border-bottom: 1px solid #ddd;
+}
+
+.company-table th {
+  width: 180px;
+  color: #244f54;
+  text-align: left;
+  background: #f3f6f6;
+}
+
+/* =========================
+  沿革
+========================= */
+
+.history {
+  padding: 100px 20px;
+  background: #f3f6f6;
+}
+
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.history-item {
+  display: flex;
+  gap: 40px;
+  padding: 20px;
+  background: #fff;
+  border-left: 5px solid #3a7378;
+}
+
+.history-item span {
+  min-width: 90px;
+  color: #3a7378;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.history-item p {
+  margin: 0;
+  line-height: 1.8;
+}
+
+/* =========================
+  スマホ
+========================= */
+
+@media screen and (max-width:768px){
+
+.company-table th,
+.company-table td{
+display:block;
+width:100%;
+}
+
+.history-item{
+flex-direction:column;
+gap:10px;
+}
+
+}

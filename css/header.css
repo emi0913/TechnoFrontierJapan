@@ -3,46 +3,66 @@
 ========================= */
 
 #header {
-  position: relative;
-  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 .site-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-height: 80px;
-  padding: 0 5%;
-  background-color: #fff;
+  min-height: 100px;
+  padding: 0 7%;
+  background-color: #183b3f;   /* フッターと同じ色 */
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
 }
-
 .site-logo {
   margin: 0;
-  font-size: 24px;
+  font-size: 25px;
   font-weight: bold;
 }
 
 .site-logo a {
+  color: #ffffff;
   text-decoration: none;
+}
+
+.header-nav a {
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.header-nav a:hover {
+  color: #b7d5d8;
+}
+
+body {
+  padding-top: 80px;
 }
 
 .header-nav ul {
   display: flex;
-  gap: 30px;
+  gap: 40px;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
 .header-nav a {
+  color: #fff;
   font-size: 15px;
   font-weight: bold;
   text-decoration: none;
 }
 
 .header-nav a:hover {
-  color: #3a7378;
+  color: #d4e9eb;
 }
 
 /* スマートフォン */

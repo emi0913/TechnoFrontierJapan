@@ -1,0 +1,358 @@
+/* =========================
+  ABOUT
+========================= */
+
+.about {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.about h2 {
+  margin-bottom: 28px;
+  font-size: 36px;
+  line-height: 1.5;
+}
+
+.about > p:not(.section-label) {
+  margin-bottom: 35px;
+  color: #555;
+  font-size: 17px;
+  line-height: 2;
+}
+
+.about a {
+  display: inline-block;
+  padding: 14px 36px;
+  color: #fff;
+  text-decoration: none;
+  background-color: #244f54;
+  border: 1px solid #244f54;
+  transition:
+    color 0.3s,
+    background-color 0.3s;
+}
+
+.about a:hover {
+  color: #244f54;
+  background-color: #fff;
+}
+
+/* =========================
+  取扱分野
+========================= */
+
+.business {
+  padding: 100px 20px;
+  background-color: #f3f6f6;
+}
+
+.business-inner {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.business-heading {
+  margin-bottom: 55px;
+  text-align: center;
+}
+
+.business-heading h2 {
+  margin-bottom: 20px;
+  font-size: 36px;
+}
+
+.business-heading > p:last-child {
+  margin-bottom: 0;
+  color: #555;
+  font-size: 16px;
+  line-height: 2;
+}
+
+.business-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 35px;
+}
+
+.business-card {
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.business-image {
+  height: 280px;
+  overflow: hidden;
+}
+
+.business-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s;
+}
+
+.business-card:hover .business-image img {
+  transform: scale(1.04);
+}
+
+.business-content {
+  padding: 35px;
+}
+
+.business-number {
+  margin-bottom: 5px;
+  color: #3a7378;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.business-en {
+  margin-bottom: 15px;
+  color: #3a7378;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.business-content h3 {
+  margin-bottom: 18px;
+  font-size: 25px;
+}
+
+.business-content > p:not(
+  .business-number,
+  .business-en
+) {
+  margin-bottom: 25px;
+  color: #555;
+  line-height: 1.9;
+}
+
+.business-content a {
+  display: inline-block;
+  padding-bottom: 5px;
+  color: #244f54;
+  font-weight: bold;
+  text-decoration: none;
+  border-bottom: 1px solid #244f54;
+}
+
+/* =========================
+  横長の取扱分野カード
+========================= */
+
+.business-wide-card {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  margin-top: 35px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.business-wide-image {
+  min-height: 360px;
+  overflow: hidden;
+}
+
+.business-wide-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s;
+}
+
+.business-wide-card:hover .business-wide-image img {
+  transform: scale(1.04);
+}
+
+.business-wide-content {
+  display: flex;
+  padding: 45px;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.business-wide-content h3 {
+  margin-bottom: 18px;
+  font-size: 28px;
+}
+
+.business-wide-content p {
+  font-size: 15px;
+}
+
+.business-wide-content > p:not(
+  .business-number,
+  .business-en
+) {
+  margin-bottom: 25px;
+  color: #555;
+  line-height: 1.9;
+}
+
+.business-wide-content a {
+  width: fit-content;
+  padding-bottom: 5px;
+  color: #244f54;
+  font-weight: bold;
+  text-decoration: none;
+  border-bottom: 1px solid #244f54;
+}
+
+/* =========================
+  強み
+========================= */
+
+.strength {
+  padding: 100px 20px;
+  text-align: center;
+  background-color: #f3f6f6;
+}
+
+.strength h2 {
+  margin-bottom: 50px;
+  font-size: 36px;
+}
+
+.strength-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.strength-card {
+  padding: 42px 25px;
+  background-color: #fff;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.strength-card span {
+  display: block;
+  margin-bottom: 15px;
+  color: #3a7378;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.strength-card h3 {
+  margin-bottom: 18px;
+  font-size: 24px;
+}
+
+.strength-card p {
+  margin-bottom: 0;
+  color: #555;
+  line-height: 1.8;
+}
+
+/* =========================
+  トップお問い合わせ
+========================= */
+
+.home-contact {
+  padding: 100px 20px;
+  color: #fff;
+  text-align: center;
+  background-color: #244f54;
+}
+
+.home-contact-inner {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.home-contact .section-label {
+  color: #fff;
+}
+
+.home-contact h2 {
+  margin-bottom: 22px;
+  font-size: 36px;
+  line-height: 1.5;
+}
+
+.home-contact p:not(.section-label) {
+  margin-bottom: 35px;
+  line-height: 2;
+}
+
+.home-contact a {
+  display: inline-flex;
+  min-width: 230px;
+  min-height: 60px;
+  color: #244f54;
+  font-weight: bold;
+  text-decoration: none;
+  background-color: #fff;
+  border: 1px solid #fff;
+  align-items: center;
+  justify-content: center;
+  transition:
+    color 0.3s,
+    background-color 0.3s;
+}
+
+.home-contact a:hover {
+  color: #fff;
+  background-color: transparent;
+}
+
+/* =========================
+  スマートフォン
+========================= */
+
+@media screen and (max-width: 768px) {
+  .about,
+  .strength,
+  .business,
+  .home-contact {
+    padding: 70px 20px;
+  }
+
+  .about h2,
+  .strength h2,
+  .business-heading h2,
+  .home-contact h2 {
+    font-size: 28px;
+  }
+
+  .strength-list,
+  .business-list {
+    grid-template-columns: 1fr;
+  }
+
+  .business-image {
+    height: 230px;
+  }
+
+  .business-content {
+    padding: 28px 22px;
+  }
+
+  .business-wide-card {
+    grid-template-columns: 1fr;
+  }
+
+  .business-wide-image {
+    min-height: 230px;
+  }
+
+  .business-wide-content {
+    padding: 28px 22px;
+  }
+
+  .business-wide-content h3 {
+    font-size: 22px;
+  }
+
+  .business-wide-content p {
+    font-size: 15px;
+  }
+}

@@ -1,0 +1,176 @@
+/* =========================
+  お問い合わせページ
+========================= */
+
+.contact-inner {
+  max-width: 950px;
+}
+
+/* =========================
+  電話・メール
+========================= */
+
+.contact-method-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+.contact-method-card {
+  padding: 50px 30px;
+  text-align: center;
+  background-color: #f3f6f6;
+  border-top: 4px solid #3a7378;
+}
+
+.contact-method-en {
+  margin-bottom: 14px;
+  color: #3a7378;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.contact-method-card h3 {
+  margin-bottom: 28px;
+  font-size: 22px;
+}
+
+/* =========================
+  電話番号
+========================= */
+
+.contact-tel {
+  display: block;
+  margin-bottom: 16px;
+  color: #244f54;
+  font-size: 34px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: opacity 0.3s;
+}
+
+.contact-tel:hover {
+  opacity: 0.7;
+}
+
+.contact-hours {
+  margin-bottom: 0;
+  color: #666;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* =========================
+  メールボタン
+========================= */
+
+.contact-mail-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 220px;
+  min-height: 58px;
+  margin-bottom: 18px;
+  padding: 12px 30px;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  background-color: #244f54;
+  border: 1px solid #244f54;
+  transition:
+  color 0.3s,
+    background-color 0.3s;
+}
+
+.contact-mail-button:hover {
+  color: #244f54;
+  background-color: #fff;
+}
+
+.contact-note {
+  margin-bottom: 0;
+  color: #666;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* =========================
+  お問い合わせ時に伝える内容
+========================= */
+
+.contact-guide {
+  margin-top: 70px;
+  padding: 45px 50px;
+  background-color: #fff;
+  border: 1px solid #ccd8d9;
+}
+
+.contact-guide h2 {
+  margin-bottom: 30px;
+  color: #244f54;
+  font-size: 26px;
+}
+
+.contact-guide ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px 40px;
+  margin: 0 0 30px;
+  padding: 0;
+  list-style: none;
+}
+
+.contact-guide li {
+  position: relative;
+  padding-left: 22px;
+  color: #444;
+  line-height: 1.8;
+}
+
+.contact-guide li::before {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  content: "";
+  background-color: #3a7378;
+}
+
+.contact-guide p {
+  margin-bottom: 0;
+  color: #555;
+  line-height: 1.9;
+}
+
+/* =========================
+  スマートフォン
+========================= */
+
+@media screen and (max-width: 768px) {
+  .contact-method-list {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-method-card {
+    padding: 40px 20px;
+  }
+
+  .contact-tel {
+    font-size: 27px;
+  }
+
+  .contact-guide {
+    margin-top: 50px;
+    padding: 30px 20px;
+  }
+
+  .contact-guide h2 {
+    font-size: 22px;
+  }
+
+  .contact-guide ul {
+    grid-template-columns: 1fr;
+  }
+}
