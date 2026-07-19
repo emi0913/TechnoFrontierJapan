@@ -128,3 +128,435 @@
     height: 210px;
   }
 }
+
+/* =========================
+   アルミ押出形材専用
+========================= */
+
+.profile-section {
+  max-width: none;
+  padding: 100px 20px;
+  background-color: #f7f8f7;
+}
+
+.profile-section > .section-label,
+.profile-section > h2 {
+  text-align: center;
+}
+
+.profile-section > h2 {
+  margin-bottom: 50px;
+  font-size: 36px;
+}
+
+/* 特徴エリア */
+.profile-introduction {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 50px;
+  max-width: 1180px;
+  margin: 0 auto 60px;
+  padding: 50px;
+  text-align: left;
+  background-color: #fff;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+}
+
+.profile-title-area {
+  padding-right: 35px;
+  border-right: 1px solid #d8dfdf;
+}
+
+.profile-en {
+  margin: 0 0 14px;
+  color: #9b7b50;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.18em;
+}
+
+.profile-title-area h3 {
+  margin: 0;
+  color: #244f54;
+  font-size: 30px;
+  line-height: 1.5;
+}
+
+.profile-feature-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px 30px;
+}
+
+.profile-feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.profile-feature-item span {
+  flex-shrink: 0;
+  color: #9b7b50;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.profile-feature-item p {
+  margin: 0;
+  color: #444;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* 画像カード一覧 */
+.profile-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  max-width: 1180px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.profile-card {
+  overflow: hidden;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+}
+
+.profile-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.14);
+}
+
+.profile-image {
+  width: 100%;
+  height: 320px;
+  overflow: hidden;
+  background-color: #eee;
+}
+
+.profile-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background-color: #fff;
+}
+
+.profile-card-content {
+  padding: 24px 26px 28px;
+}
+
+.profile-card-content h3 {
+  margin: 0 0 18px;
+  color: #244f54;
+  font-size: 22px;
+}
+
+.profile-spec {
+  margin: 0;
+}
+
+.profile-spec div {
+  display: grid;
+  grid-template-columns: 75px 1fr;
+  padding: 10px 0;
+  border-top: 1px solid #e5e5e5;
+}
+
+.profile-spec div:last-child {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.profile-spec dt {
+  color: #777;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.profile-spec dd {
+  margin: 0;
+  color: #333;
+  font-size: 14px;
+}
+
+/* タブレット */
+@media screen and (max-width: 900px) {
+  .profile-introduction {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 40px;
+  }
+
+  .profile-title-area {
+    padding-right: 0;
+    padding-bottom: 25px;
+    border-right: none;
+    border-bottom: 1px solid #d8dfdf;
+  }
+
+  .profile-feature-list {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-image {
+    height: 280px;
+  }
+}
+
+/* スマートフォン */
+@media screen and (max-width: 600px) {
+  .profile-section {
+    padding: 70px 20px;
+  }
+
+  .profile-section > h2 {
+    font-size: 28px;
+  }
+
+  .profile-introduction {
+    padding: 28px 20px;
+  }
+
+  .profile-title-area h3 {
+    font-size: 24px;
+  }
+
+  .profile-image {
+    height: 220px;
+  }
+
+  .profile-card-content {
+    padding: 20px;
+  }
+}
+
+/* =========================
+   製品カテゴリー共通
+========================= */
+
+.category-section {
+  max-width: none;
+  padding: 100px 20px;
+}
+
+.category-section:nth-of-type(even) {
+  background-color: #f7f8f7;
+}
+
+.category-section > .section-label,
+.category-section > h2 {
+  text-align: center;
+}
+
+.category-section > h2 {
+  margin-bottom: 50px;
+  font-size: 36px;
+}
+
+/* カテゴリー説明 */
+.category-introduction {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 50px;
+  max-width: 1180px;
+  margin: 0 auto 60px;
+  padding: 50px;
+  text-align: left;
+  background-color: #fff;
+  border: 1px solid #e2e6e6;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+}
+
+.category-title-area {
+  padding-right: 35px;
+  border-right: 1px solid #d8dfdf;
+}
+
+.category-en {
+  margin: 0 0 14px;
+  color: #9b7b50;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.18em;
+}
+
+.category-title-area h3 {
+  margin: 0;
+  color: #244f54;
+  font-size: 28px;
+  line-height: 1.5;
+}
+
+.category-description p {
+  margin: 0 0 16px;
+  color: #444;
+  font-size: 15px;
+  line-height: 2;
+}
+
+.category-description p:last-child {
+  margin-bottom: 0;
+}
+
+/* 製品画像一覧 */
+.category-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  max-width: 1180px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.category-card {
+  overflow: hidden;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+}
+
+.category-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.14);
+}
+
+.category-image {
+  width: 100%;
+  height: 320px;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.category-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background-color: #fff;
+  transition: transform 0.4s;
+}
+
+.category-card:hover .category-image img {
+  transform: scale(1.03);
+}
+
+.category-card-content {
+  padding: 24px 26px 28px;
+}
+
+.category-card-content h3 {
+  margin: 0 0 18px;
+  color: #244f54;
+  font-size: 22px;
+}
+
+.category-spec {
+  margin: 0;
+}
+
+.category-spec div {
+  display: grid;
+  grid-template-columns: 75px 1fr;
+  padding: 10px 0;
+  border-top: 1px solid #e5e5e5;
+}
+
+.category-spec div:last-child {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.category-spec dt {
+  color: #777;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.category-spec dd {
+  margin: 0;
+  color: #333;
+  font-size: 14px;
+}
+
+/* タブレット */
+@media screen and (max-width: 900px) {
+
+  .category-introduction {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 40px;
+  }
+
+  .category-title-area {
+    padding-right: 0;
+    padding-bottom: 25px;
+    border-right: none;
+    border-bottom: 1px solid #d8dfdf;
+  }
+
+  .category-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .category-image {
+    height: 280px;
+  }
+
+}
+
+/* スマートフォン */
+@media screen and (max-width: 600px) {
+
+  .category-section {
+    padding: 70px 20px;
+  }
+
+  .category-section > h2 {
+    font-size: 28px;
+  }
+
+  .category-introduction {
+    padding: 28px 20px;
+  }
+
+  .category-title-area h3 {
+    font-size: 24px;
+  }
+
+  .category-image {
+    height: 220px;
+  }
+
+  .category-card-content {
+    padding: 20px;
+  }
+
+}
+
+/* =========================
+  産業機器分野
+========================= */
+
+#industry {
+  background-color: #f7f8f7;
+}
+
+/* =========================
+  アルミパレット
+========================= */
+
+#pallet {
+  background-color: #ffffff;
+}
