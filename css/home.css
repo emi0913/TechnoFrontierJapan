@@ -1,4 +1,521 @@
 /* =========================
+  共通設定
+========================= */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ヘッダーに隠れないようにする */
+#home-navigation,
+#order-flow,
+#business,
+#strength-products,
+#strength-results,
+#strength-support {
+  scroll-margin-top: 110px;
+}
+
+
+/* =========================
+  メインビジュアル
+========================= */
+
+.main-visual {
+  position: relative;
+  min-height: 720px;
+  overflow: hidden;
+  color: #fff;
+}
+
+/* メイン画像 */
+.main-visual-image {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.main-visual-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* 画像の上に重ねる暗い色 */
+.main-visual-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(10, 42, 45, 0.88) 0%,
+      rgba(10, 42, 45, 0.62) 42%,
+      rgba(10, 42, 45, 0.15) 75%,
+      rgba(10, 42, 45, 0.08) 100%
+    );
+}
+
+.main-visual-inner {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  min-height: 720px;
+  padding: 100px 40px 70px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.main-visual-text {
+  max-width: 650px;
+}
+
+.main-visual .section-en {
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 5px;
+}
+
+.main-visual h1 {
+  margin-bottom: 30px;
+  font-size: clamp(48px, 6vw, 78px);
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: 0.04em;
+}
+
+.main-visual .hero-text {
+  margin-bottom: 42px;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.05em;
+}
+
+.main-visual-button {
+  display: inline-flex;
+  min-width: 230px;
+  min-height: 62px;
+  padding: 0 28px;
+  color: #244f54;
+  font-weight: bold;
+  text-decoration: none;
+  background-color: #fff;
+  border: 1px solid #fff;
+  align-items: center;
+  justify-content: space-between;
+  transition:
+    color 0.3s,
+    background-color 0.3s,
+    transform 0.3s;
+}
+
+.main-visual-button:hover {
+  color: #fff;
+  background-color: transparent;
+  transform: translateY(-3px);
+}
+
+/* SCROLL */
+.scroll-guide {
+  position: absolute;
+  right: 42px;
+  bottom: 0;
+  z-index: 4;
+  display: flex;
+  color: #fff;
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-decoration: none;
+  writing-mode: vertical-rl;
+  align-items: center;
+}
+
+.scroll-guide-line {
+  display: block;
+  width: 1px;
+  height: 75px;
+  margin-top: 15px;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.scroll-guide-line::after {
+  display: block;
+  width: 1px;
+  height: 35px;
+  content: "";
+  background-color: #fff;
+  animation: scrollLine 2s ease-in-out infinite;
+}
+
+@keyframes scrollLine {
+  0% {
+    transform: translateY(-40px);
+  }
+
+  100% {
+    transform: translateY(80px);
+  }
+}
+
+
+/* =========================
+  選ばれる理由・目的から探す
+========================= */
+
+.home-navigation {
+  padding: 110px 20px;
+  background-color: #f5f7f7;
+}
+
+.home-navigation-inner {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+
+/* =========================
+  選ばれる理由
+========================= */
+
+.reason-navigation {
+  margin-bottom: 100px;
+}
+
+.reason-navigation-heading {
+  margin-bottom: 55px;
+  text-align: center;
+}
+
+.reason-navigation-heading h2 {
+  margin-bottom: 20px;
+  font-size: 40px;
+  letter-spacing: 0.04em;
+}
+
+.reason-navigation-heading > p:last-child {
+  color: #5a6667;
+  font-size: 16px;
+  line-height: 2;
+}
+
+.reason-navigation-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.reason-navigation-item {
+  position: relative;
+  display: flex;
+  min-height: 330px;
+  padding: 38px 30px 30px;
+  overflow: hidden;
+  color: #222;
+  text-align: center;
+  text-decoration: none;
+  background-color: #fff;
+  border: 1px solid #e1e7e7;
+  flex-direction: column;
+  align-items: center;
+  transition:
+    transform 0.35s,
+    box-shadow 0.35s,
+    border-color 0.35s;
+}
+
+.reason-navigation-item::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  content: "";
+  background-color: #244f54;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s;
+}
+
+.reason-navigation-item:hover {
+  border-color: transparent;
+  box-shadow: 0 18px 45px rgba(26, 65, 68, 0.13);
+  transform: translateY(-8px);
+}
+
+.reason-navigation-item:hover::before {
+  transform: scaleX(1);
+}
+
+.reason-navigation-number {
+  position: absolute;
+  top: 18px;
+  left: 20px;
+  color: #99adaf;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.reason-navigation-icon {
+  display: flex;
+  width: 78px;
+  height: 78px;
+  margin-bottom: 25px;
+  color: #fff;
+  background-color: #244f54;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+}
+
+.reason-navigation-icon span {
+  font-size: 20px;
+  transform: rotate(45deg);
+}
+
+.reason-navigation-item h3 {
+  margin-bottom: 16px;
+  font-size: 22px;
+}
+
+.reason-navigation-item p {
+  margin-bottom: 24px;
+  color: #667071;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.reason-navigation-arrow {
+  display: flex;
+  width: 38px;
+  height: 38px;
+  margin-top: auto;
+  color: #244f54;
+  border: 1px solid #244f54;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  transition:
+    color 0.3s,
+    background-color 0.3s,
+    transform 0.3s;
+}
+
+.reason-navigation-item:hover .reason-navigation-arrow {
+  color: #fff;
+  background-color: #244f54;
+  transform: translateY(4px);
+}
+
+
+/* =========================
+  目的から探す
+========================= */
+
+.page-navigation-heading {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.page-navigation-heading h2 {
+  font-size: 36px;
+}
+
+.page-navigation-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.page-navigation-button {
+  display: flex;
+  min-height: 150px;
+  padding: 28px 24px;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  background-color: #244f54;
+  border: 1px solid #244f54;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition:
+    color 0.3s,
+    background-color 0.3s,
+    transform 0.3s,
+    box-shadow 0.3s;
+}
+
+.page-navigation-button:hover {
+  color: #244f54;
+  background-color: #fff;
+  box-shadow: 0 12px 30px rgba(24, 68, 71, 0.13);
+  transform: translateY(-5px);
+}
+
+.page-navigation-button div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page-navigation-arrow {
+  display: block;
+  margin-top: 18px;
+  font-size: 34px;
+  font-weight: 300;
+  line-height: 1;
+  transition: transform 0.3s;
+}
+.page-navigation-en {
+  margin-bottom: 8px;
+  font-size: 10px;
+  letter-spacing: 2px;
+  opacity: 0.75;
+}
+
+.page-navigation-button strong {
+  font-size: 19px;
+  letter-spacing: 0.04em;
+}
+
+.page-navigation-arrow {
+  font-size: 24px;
+  transition: transform 0.3s;
+}
+
+.page-navigation-button:hover .page-navigation-arrow {
+  transform: translateY(7px);
+}
+
+
+/* =========================
+  購入までの流れ
+========================= */
+
+.order-flow {
+  padding: 110px 20px;
+  background-color: #fff;
+}
+
+.order-flow-inner {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.order-flow-heading {
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.order-flow-heading h2 {
+  margin-bottom: 20px;
+  font-size: 40px;
+}
+
+.order-flow-heading > p:last-child {
+  color: #596566;
+  line-height: 2;
+}
+
+.order-flow-list {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+}
+
+.order-flow-item {
+  position: relative;
+  width: 23%;
+  padding: 38px 22px 32px;
+  text-align: center;
+  background-color: #f4f7f7;
+  border-top: 3px solid #244f54;
+}
+
+.order-flow-number {
+  position: absolute;
+  top: 14px;
+  left: 17px;
+  color: #81999b;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.order-flow-icon {
+  display: flex;
+  width: 84px;
+  height: 84px;
+  margin: 0 auto 24px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  background-color: #244f54;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+}
+
+.order-flow-item h3 {
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.order-flow-item p {
+  margin-bottom: 0;
+  color: #606b6c;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.order-flow-arrow {
+  display: flex;
+  width: 5%;
+  color: #4f777a;
+  font-size: 24px;
+  align-items: center;
+  justify-content: center;
+}
+
+.order-flow-button-area {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.order-flow-button {
+  display: inline-flex;
+  min-width: 300px;
+  min-height: 62px;
+  padding: 0 28px;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  background-color: #244f54;
+  border: 1px solid #244f54;
+  align-items: center;
+  justify-content: space-between;
+  transition:
+    color 0.3s,
+    background-color 0.3s,
+    transform 0.3s;
+}
+
+.order-flow-button:hover {
+  color: #244f54;
+  background-color: #fff;
+  transform: translateY(-3px);
+}
+
+/* =========================
   ABOUT
 ========================= */
 
@@ -11,7 +528,7 @@
 
 .about h2 {
   margin-bottom: 28px;
-  font-size: 36px;
+  font-size: 50px;
   line-height: 1.5;
 }
 
@@ -50,7 +567,7 @@
 
 .business-inner {
   width: 100%;
-  max-width: 1100px;
+  max-width: 1800px;
   margin: 0 auto;
 }
 
@@ -71,27 +588,22 @@
   line-height: 2;
 }
 
-.business-list {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 35px;
-}
-
-.business-card:last-child {
-  width: 100%;
-  max-width: 532px;
-  grid-column: 1 / -1;
-  justify-self: center;
+.business-list{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:20px;
 }
 
 .business-card {
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
-  background-color: #fff;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  background: #fff;
+  box-shadow: 0 5px 20px rgba(0,0,0,.08);
 }
 
 .business-image {
-  height: 280px;
+  height: 180px;
   overflow: hidden;
 }
 
@@ -107,7 +619,10 @@
 }
 
 .business-content {
-  padding: 35px;
+  display: flex;
+  flex: 1;
+  padding: 24px;
+  flex-direction: column;
 }
 
 .business-number {
@@ -140,12 +655,23 @@
 }
 
 .business-content a {
-  display: inline-block;
-  padding-bottom: 5px;
+  display: block;
+  width: 100%;
+  margin-top: auto;
+  padding: 14px 20px;
   color: #244f54;
-  font-weight: bold;
+  font-size: 17px;
+  font-weight: 700;
+  text-align: center;
   text-decoration: none;
-  border-bottom: 1px solid #244f54;
+  border: 2px solid #244f54;
+  border-radius: 10px;
+  transition: all 0.3s;
+}
+
+.business-content a:hover {
+  color: #fff;
+  background: #244f54;
 }
 
 /* =========================
@@ -259,10 +785,6 @@
   .home-contact {
     padding: 70px 20px;
   }
-  .business-card:last-child {
-  max-width: none;
-  grid-column: auto;
-  } 
 
   .about h2,
   .strength h2,
@@ -283,17 +805,113 @@
   .business-content {
     padding: 28px 22px;
   }
+
+    /* メインビジュアル */
   .main-visual {
-    min-height: 570px;
-    padding: 70px 20px;
-    background-position: center;
+    min-height: 630px;
+  }
+
+  .main-visual-inner {
+    min-height: 630px;
+    padding: 100px 24px 60px;
+  }
+
+  .main-visual-overlay {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(10, 42, 45, 0.88) 0%,
+        rgba(10, 42, 45, 0.66) 70%,
+        rgba(10, 42, 45, 0.45) 100%
+      );
   }
 
   .main-visual h1 {
-    font-size: 40px;
+    font-size: 43px;
   }
 
   .main-visual .hero-text {
-    font-size: 16px;
+    font-size: 15px;
+    line-height: 1.9;
+  }
+
+  .main-visual-button {
+    min-width: 200px;
+    min-height: 56px;
+  }
+
+  .scroll-guide {
+    right: 18px;
+  }
+
+  /* 選ばれる理由 */
+  .home-navigation {
+    padding: 75px 20px;
+  }
+
+  .reason-navigation {
+    margin-bottom: 75px;
+  }
+
+  .reason-navigation-heading {
+    margin-bottom: 38px;
+  }
+
+  .reason-navigation-heading h2 {
+    font-size: 30px;
+  }
+
+  .reason-navigation-list {
+    grid-template-columns: 1fr;
+  }
+
+  .reason-navigation-item {
+    min-height: 290px;
+  }
+
+  /* 目的から探す */
+  .page-navigation-heading h2 {
+    font-size: 28px;
+  }
+
+  .page-navigation-list {
+    grid-template-columns: 1fr;
+  }
+
+  .page-navigation-button {
+    min-height: 100px;
+  }
+
+  /* 購入までの流れ */
+  .order-flow {
+    padding: 75px 20px;
+  }
+
+  .order-flow-heading {
+    margin-bottom: 40px;
+  }
+
+  .order-flow-heading h2 {
+    font-size: 30px;
+  }
+
+  .order-flow-list {
+    flex-direction: column;
+  }
+
+  .order-flow-item {
+    width: 100%;
+  }
+
+  .order-flow-arrow {
+    width: 100%;
+    height: 45px;
+    transform: rotate(90deg);
+  }
+
+  .order-flow-button {
+    width: 100%;
+    min-width: 0;
   }
 }
+
