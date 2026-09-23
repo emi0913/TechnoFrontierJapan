@@ -4,43 +4,116 @@
 
 .company-table {
   width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
   border-collapse: collapse;
+  overflow: hidden;
+  background-color: #fff;
+  border: 1px solid #dfe5e4;
+  box-shadow: 0 8px 28px rgba(36, 79, 84, 0.08);
 }
 
 .company-table th,
 .company-table td {
-  padding: 18px;
-  border-bottom: 1px solid #ddd;
+  padding: 22px 28px;
+  border-bottom: 1px solid #dfe5e4;
+  font-size: 16px;
+  line-height: 1.8;
 }
 
 .company-table th {
-  width: 180px;
+  width: 220px;
   color: #244f54;
+  font-weight: 700;
   text-align: left;
-  background: #f3f6f6;
+  vertical-align: top;
+  background-color: #f3f6f6;
 }
+
+.company-table td {
+  color: #333;
+  background-color: #fff;
+}
+
+.company-table tr:last-child th,
+.company-table tr:last-child td {
+  border-bottom: none;
+}
+
+.company-info {
+  padding: 100px 20px;
+  background-color: #fff;
+}
+
+.company-info .section-heading {
+  text-align: center;
+}
+
+.company-message {
+  background-color: #f5f7f6;
+}
+
+.company-message .section-heading {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 48px 56px;
+  text-align: center;
+  background-color: #fff;
+  border: 1px solid #dfe5e4;
+  box-shadow: 0 8px 28px rgba(36, 79, 84, 0.08);
+}
+
+.company-message .section-heading h2 {
+  color: #244f54;
+}
+
+.company-message .section-heading > p:last-child {
+  color: #444;
+}
+
+/* =========================
+  会社案内 メインビジュアル
+========================= */
+
 
 /* =========================
   沿革
 ========================= */
 
+.company-main-visual {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(20, 35, 38, 0.78) 0%,
+      rgba(20, 35, 38, 0.60) 35%,
+      rgba(20, 35, 38, 0.20) 60%,
+      rgba(20, 35, 38, 0.05) 100%
+    ),
+    url("../images/factory/company-main.png") center / cover no-repeat;
+}
+
 .history {
   padding: 100px 20px;
-  background: #f3f6f6;
+  background-color: #f5f7f6;
 }
 
 .history-list {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 16px;
+  max-width: 960px;
+  margin: 0 auto;
 }
 
 .history-item {
   display: flex;
-  gap: 40px;
-  padding: 20px;
-  background: #fff;
+  gap: 34px;
+  padding: 24px 28px;
+  background-color: #fff;
+  border: 1px solid #dfe5e4;
   border-left: 5px solid #3a7378;
+  box-shadow: 0 6px 20px rgba(36, 79, 84, 0.06);
+  align-items: center;
 }
 
 .history-item span {
@@ -52,7 +125,14 @@
 
 .history-item p {
   margin: 0;
+  color: #444;
   line-height: 1.8;
+}
+
+.history .section-heading,
+.production-system .section-heading,
+.factory-facility .section-heading {
+  text-align: center;
 }
 
 /* =========================
@@ -61,15 +141,34 @@
 
 @media screen and (max-width:768px){
 
+.company-message .section-heading {
+padding:36px 24px;
+}
+
+.company-info {
+padding:70px 20px;
+}
+
 .company-table th,
 .company-table td{
 display:block;
 width:100%;
+padding:16px 20px;
+font-size:15px;
+}
+
+.company-table th{
+border-bottom:none;
+}
+
+.company-table td{
+padding-top:0;
 }
 
 .history-item{
 flex-direction:column;
 gap:10px;
+align-items:flex-start;
 }
 }
 
@@ -78,7 +177,7 @@ gap:10px;
 ========================= */
 
 .production-system {
-  padding: 120px 30px;
+  padding: 100px 20px;
   background-color: #f5f7f6;
 }
 
@@ -89,6 +188,7 @@ gap:10px;
   margin: 60px auto 0;
   overflow: hidden;
   background-color: #fff;
+  border: 1px solid #dfe5e4;
   box-shadow: 0 10px 35px rgba(36, 79, 84, 0.1);
 }
 
@@ -185,7 +285,7 @@ gap:10px;
 ========================= */
 
 .factory-facility {
-  padding: 120px 30px;
+  padding: 100px 20px;
   background-color: #fff;
 }
 
@@ -226,6 +326,7 @@ gap:10px;
 
 .facility-content {
   padding: 28px 28px 34px;
+  text-align: center;
 }
 
 .facility-en {
@@ -251,7 +352,7 @@ gap:10px;
 
 
 /* =========================
-   タブレット
+  タブレット
 ========================= */
 
 @media screen and (max-width: 900px) {
@@ -282,6 +383,10 @@ gap:10px;
 
   .production-system,
   .factory-facility {
+    padding: 80px 20px;
+  }
+
+  .history {
     padding: 80px 20px;
   }
 

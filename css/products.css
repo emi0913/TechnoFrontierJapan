@@ -2,6 +2,18 @@
    製品紹介
 ========================= */
 
+.products-main-visual {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(20, 35, 38, 0.78) 0%,
+      rgba(20, 35, 38, 0.60) 35%,
+      rgba(20, 35, 38, 0.20) 60%,
+      rgba(20, 35, 38, 0.05) 100%
+    ),
+    url("../images/factory/product-main.png") center / cover no-repeat;
+}
+
 .products-section {
   max-width: 1180px;
   margin: 0 auto;
@@ -185,26 +197,35 @@
 .profile-feature-list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 22px 30px;
+  gap: 20px 60px;
+
+  max-width: 1000px;
+  margin: 0 auto 70px;
+  padding: 35px 45px;
+
+  text-align: left;
+  background-color: #fff;
+  border: 1px solid #e5e8e8;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
 }
 
 .profile-feature-item {
   display: flex;
   align-items: flex-start;
-  gap: 14px;
+  gap: 10px;
 }
 
 .profile-feature-item span {
   flex-shrink: 0;
   color: #9b7b50;
-  font-size: 14px;
+  font-size: 17px;  /* 14px → 17px */
   font-weight: bold;
 }
 
 .profile-feature-item p {
   margin: 0;
   color: #444;
-  font-size: 15px;
+  font-size: 15px;  /* 15px → 18px */
   line-height: 1.8;
 }
 
@@ -235,9 +256,9 @@
 
 .profile-image {
   width: 100%;
-  height: 320px;
+  aspect-ratio: 1620 / 971;
   overflow: hidden;
-  background-color: #eee;
+  background: #fff;
 }
 
 .profile-image img {
@@ -245,7 +266,6 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
-  background-color: #fff;
 }
 
 .profile-card-content {
@@ -308,9 +328,6 @@
     grid-template-columns: 1fr;
   }
 
-  .profile-image {
-    height: 280px;
-  }
 }
 
 /* スマートフォン */
@@ -329,10 +346,6 @@
 
   .profile-title-area h3 {
     font-size: 24px;
-  }
-
-  .profile-image {
-    height: 220px;
   }
 
   .profile-card-content {
@@ -363,49 +376,40 @@
   font-size: 36px;
 }
 
-/* カテゴリー説明 */
-.category-introduction {
-  display: grid;
-  grid-template-columns: 320px 1fr;
-  gap: 50px;
-  max-width: 1180px;
+/* =========================
+   カテゴリー見出し
+========================= */
+
+.category-heading {
+  max-width: 1100px;
   margin: 0 auto 60px;
-  padding: 50px;
-  text-align: left;
-  background-color: #fff;
-  border: 1px solid #e2e6e6;
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+  text-align: center;
 }
 
-.category-title-area {
-  padding-right: 35px;
-  border-right: 1px solid #d8dfdf;
-}
-
-.category-en {
-  margin: 0 0 14px;
-  color: #9b7b50;
-  font-size: 14px;
-  font-weight: bold;
-  letter-spacing: 0.18em;
-}
-
-.category-title-area h3 {
-  margin: 0;
-  color: #244f54;
-  font-size: 28px;
-  line-height: 1.5;
-}
-
-.category-description p {
+.category-heading .section-label {
   margin: 0 0 16px;
-  color: #444;
+  color: #2f6f75;
   font-size: 15px;
-  line-height: 2;
+  font-weight: 700;
+  letter-spacing: 0.28em;
 }
 
-.category-description p:last-child {
-  margin-bottom: 0;
+.category-heading h2 {
+  margin: 0 0 28px;
+  color: #1f1f1f;
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.category-lead {
+  max-width: none;
+  margin: 0 auto;
+  color: #555;
+  font-size: 18px;
+  line-height: 1.8;
+  letter-spacing: 0.03em; 
+  white-space: nowrap;
 }
 
 /* 製品画像一覧 */
@@ -435,18 +439,15 @@
 
 .category-image {
   width: 100%;
-  height: 380px;   /* 枠だけ高くする */
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  aspect-ratio: 1620 / 971;
+  overflow: hidden;
   background: #fff;
 }
 
 .category-image img {
-  max-width: 110%;
-  max-height: 120%;
-  width: auto;
-  height: auto;
+  display: block;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
 }
 
@@ -490,19 +491,6 @@
 /* タブレット */
 @media screen and (max-width: 900px) {
 
-  .category-introduction {
-    grid-template-columns: 1fr;
-    gap: 30px;
-    padding: 40px;
-  }
-
-  .category-title-area {
-    padding-right: 0;
-    padding-bottom: 25px;
-    border-right: none;
-    border-bottom: 1px solid #d8dfdf;
-  }
-
   .category-gallery {
     grid-template-columns: 1fr;
   }
@@ -513,6 +501,7 @@
 
 }
 
+
 /* スマートフォン */
 @media screen and (max-width: 600px) {
 
@@ -520,16 +509,22 @@
     padding: 70px 20px;
   }
 
-  .category-section > h2 {
+  .category-heading {
+    margin-bottom: 40px;
+  }
+
+  .category-heading h2 {
+    margin-bottom: 18px;
     font-size: 28px;
   }
 
-  .category-introduction {
-    padding: 28px 20px;
+  .category-lead {
+    font-size: 15px;
+    line-height: 1.9;
   }
 
-  .category-title-area h3 {
-    font-size: 24px;
+  .category-gallery {
+    grid-template-columns: 1fr;
   }
 
   .category-image {

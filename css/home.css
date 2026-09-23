@@ -23,7 +23,8 @@ html {
 
 .main-visual {
   position: relative;
-  min-height: 720px;
+  min-height: 650px;
+  padding: 0;
   overflow: hidden;
   color: #fff;
 }
@@ -62,9 +63,9 @@ html {
   z-index: 3;
   display: flex;
   width: 100%;
-  max-width: 1200px;
-  min-height: 720px;
-  padding: 100px 40px 70px;
+  max-width: none;
+  min-height: 650px;
+  padding: 80px 8%;
   margin: 0 auto;
   align-items: center;
 }
@@ -83,10 +84,11 @@ html {
 
 .main-visual h1 {
   margin-bottom: 30px;
-  font-size: clamp(48px, 6vw, 78px);
+  font-size: 52px;
   font-weight: 600;
-  line-height: 1.25;
+  line-height: 1.5;
   letter-spacing: 0.04em;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .main-visual .hero-text {
@@ -557,122 +559,101 @@ html {
 }
 
 /* =========================
+  ABOUT お悩み
+========================= */
+
+.about-problems {
+  max-width: 1000px;
+  margin: 55px auto 40px;
+}
+
+.about-problems-title {
+  margin-bottom: 30px;
+  color: #244f54;
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.about-problems-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px 24px;
+  padding: 32px 40px;
+  text-align: left;
+  background-color: #f5f7f7;
+}
+
+.about-problems-list p {
+  margin: 0;
+  color: #555;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.about-problems-message {
+  margin-top: 30px;
+  color: #244f54;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* スマホ */
+@media screen and (max-width: 768px) {
+  .about-problems {
+    margin-top: 40px;
+  }
+
+  .about-problems-title {
+    font-size: 21px;
+  }
+
+  .about-problems-list {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 25px 22px;
+  }
+
+  .about-problems-list p {
+    font-size: 15px;
+  }
+
+  .about-problems-message {
+    font-size: 18px;
+    line-height: 1.7;
+  }
+}
+
+/* =========================
   取扱分野
 ========================= */
 
-.business {
-  padding: 100px 20px;
-  background-color: #f3f6f6;
-}
+.business { padding: 100px 20px; background-color: #f3f6f6; }
+.business-inner { width: 100%; max-width: 1180px; margin: 0 auto; }
+.business-heading { margin-bottom: 55px; text-align: center; }
+.business-heading h2 { margin-bottom: 20px; font-size: 36px; }
+.business-heading > p:last-child { margin-bottom: 0; color: #555; font-size: 16px; line-height: 2; }
 
-.business-inner {
-  width: 100%;
-  max-width: 1800px;
-  margin: 0 auto;
-}
+.business-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
+.business-card { display: flex; min-height: 290px; overflow: hidden; background: #fff; box-shadow: 0 5px 20px rgba(0,0,0,.08); flex-direction: row; align-items: stretch; }
+.business-card:nth-child(5) { grid-column: 1 / -1; width: calc((100% - 28px) / 2); justify-self: center; }
 
-.business-heading {
-  margin-bottom: 55px;
-  text-align: center;
-}
+/* 右側の固定サンプル写真 */
+.business-image { display: block; width: 38%; min-width: 190px; height: auto; margin: 30px 30px 30px 0; overflow: hidden; background: #eef2f2; order: 2; }
+.business-image img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center; transition: none; }
+.business-card:hover .business-image img { transform: none; }
 
-.business-heading h2 {
-  margin-bottom: 20px;
-  font-size: 36px;
-}
+/* 左側 */
+.business-content { display: flex; width: 62%; flex: none; padding: 32px 12px 32px 28px; flex-direction: column; order: 1; }
+.business-number { margin-bottom: 8px; color: #3a7378; font-size: 28px; font-weight: bold; }
+.business-en { margin-bottom: 17px; color: #3a7378; font-size: 12px; font-weight: bold; letter-spacing: 3px; }
+.business-content h3 { margin-bottom: 24px; font-size: 22px; line-height: 1.5; }
 
-.business-heading > p:last-child {
-  margin-bottom: 0;
-  color: #555;
-  font-size: 16px;
-  line-height: 2;
-}
-
-.business-list{
-    display:grid;
-    grid-template-columns:repeat(5,1fr);
-    gap:20px;
-}
-
-.business-card {
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  background: #fff;
-  box-shadow: 0 5px 20px rgba(0,0,0,.08);
-}
-
-.business-image {
-  height: 180px;
-  overflow: hidden;
-}
-
-.business-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.4s;
-}
-
-.business-card:hover .business-image img {
-  transform: scale(1.04);
-}
-
-.business-content {
-  display: flex;
-  flex: 1;
-  padding: 24px;
-  flex-direction: column;
-}
-
-.business-number {
-  margin-bottom: 5px;
-  color: #3a7378;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.business-en {
-  margin-bottom: 15px;
-  color: #3a7378;
-  font-size: 12px;
-  font-weight: bold;
-  letter-spacing: 3px;
-}
-
-.business-content h3 {
-  margin-bottom: 18px;
-  font-size: 25px;
-}
-
-.business-content > p:not(
-  .business-number,
-  .business-en
-) {
-  margin-bottom: 25px;
-  color: #555;
-  line-height: 1.9;
-}
-
-.business-content a {
-  display: block;
-  width: 100%;
-  margin-top: auto;
-  padding: 14px 20px;
-  color: #244f54;
-  font-size: 17px;
-  font-weight: 700;
-  text-align: center;
-  text-decoration: none;
-  border: 2px solid #244f54;
-  border-radius: 10px;
-  transition: all 0.3s;
-}
-
-.business-content a:hover {
-  color: #fff;
-  background: #244f54;
-}
+/* 詳しく見る：左側だけの幅 */
+.business-content a { display: flex; width: 78%; min-height: 48px; margin: 16px 0 0; padding: 0 16px; color: #244f54; font-size: 15px; font-weight: 700; text-align: left; text-decoration: none; border: 2px solid #244f54; border-radius: 8px; align-items: center; justify-content: space-between; transition: color .3s, background-color .3s; }
+.business-content a::after { content: "→"; font-size: 20px; font-weight: 400; }
+.business-content a:hover { color: #fff; background: #244f54; }
 
 /* =========================
   強み
@@ -798,6 +779,13 @@ html {
     grid-template-columns: 1fr;
   }
 
+  .business-card,
+  .business-card:nth-child(4),
+  .business-card:nth-child(5) {
+    grid-column: auto;
+    width: auto;
+  }
+
   .business-image {
     height: 230px;
   }
@@ -808,12 +796,13 @@ html {
 
     /* メインビジュアル */
   .main-visual {
-    min-height: 630px;
+    min-height: 520px;
+    padding: 0;
   }
 
   .main-visual-inner {
-    min-height: 630px;
-    padding: 100px 24px 60px;
+    min-height: 520px;
+    padding: 60px 25px;
   }
 
   .main-visual-overlay {
@@ -827,7 +816,7 @@ html {
   }
 
   .main-visual h1 {
-    font-size: 43px;
+    font-size: 34px;
   }
 
   .main-visual .hero-text {
@@ -915,3 +904,11 @@ html {
   }
 }
 
+
+/* 取扱製品：スマホ用最終調整 */
+@media screen and (max-width: 768px) {
+  .business-card, .business-card:nth-child(5) { width: 100%; min-height: 0; grid-column: auto; flex-direction: column; }
+  .business-image { display:block; width: calc(100% - 44px); min-width: 0; height: 210px; margin: 22px 22px 0; order: 1; }
+  .business-content { width: 100%; padding: 24px 22px 28px; order: 2; }
+  .business-content a { width: 100%; }
+}
