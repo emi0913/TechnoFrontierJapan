@@ -66,6 +66,8 @@
 .product-material {
   margin-bottom: 12px;
   color: #3a7378;
+  font-size: 18px;
+  line-height: 1.8;
   font-weight: bold;
 }
 
@@ -73,6 +75,7 @@
   min-height: 58px;
   margin-bottom: 24px;
   color: #555;
+  font-size: 18px;
   line-height: 1.8;
 }
 
@@ -123,23 +126,6 @@
 }
 
 /* スマートフォン */
-@media screen and (max-width: 600px) {
-  .products-section {
-    padding: 70px 20px;
-  }
-
-  .products-section > h2 {
-    font-size: 28px;
-  }
-
-  .product-list {
-    grid-template-columns: 1fr;
-  }
-
-  .product-card img {
-    height: 210px;
-  }
-}
 
 /* =========================
    アルミ押出形材専用
@@ -218,14 +204,14 @@
 .profile-feature-item span {
   flex-shrink: 0;
   color: #9b7b50;
-  font-size: 17px;  /* 14px → 17px */
+  font-size: 18px;
   font-weight: bold;
 }
 
 .profile-feature-item p {
   margin: 0;
   color: #444;
-  font-size: 15px;  /* 15px → 18px */
+  font-size: 18px;
   line-height: 1.8;
 }
 
@@ -295,14 +281,14 @@
 
 .profile-spec dt {
   color: #777;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: bold;
 }
 
 .profile-spec dd {
   margin: 0;
   color: #333;
-  font-size: 14px;
+  font-size: 18px;
 }
 
 /* タブレット */
@@ -331,27 +317,6 @@
 }
 
 /* スマートフォン */
-@media screen and (max-width: 600px) {
-  .profile-section {
-    padding: 70px 20px;
-  }
-
-  .profile-section > h2 {
-    font-size: 28px;
-  }
-
-  .profile-introduction {
-    padding: 28px 20px;
-  }
-
-  .profile-title-area h3 {
-    font-size: 24px;
-  }
-
-  .profile-card-content {
-    padding: 20px;
-  }
-}
 
 /* =========================
    製品カテゴリー共通
@@ -408,7 +373,7 @@
   color: #555;
   font-size: 18px;
   line-height: 1.8;
-  letter-spacing: 0.03em; 
+  letter-spacing: 0.03em;
   white-space: nowrap;
 }
 
@@ -478,14 +443,14 @@
 
 .category-spec dt {
   color: #777;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: bold;
 }
 
 .category-spec dd {
   margin: 0;
   color: #333;
-  font-size: 14px;
+  font-size: 18px;
 }
 
 /* タブレット */
@@ -501,41 +466,7 @@
 
 }
 
-
 /* スマートフォン */
-@media screen and (max-width: 600px) {
-
-  .category-section {
-    padding: 70px 20px;
-  }
-
-  .category-heading {
-    margin-bottom: 40px;
-  }
-
-  .category-heading h2 {
-    margin-bottom: 18px;
-    font-size: 28px;
-  }
-
-  .category-lead {
-    font-size: 15px;
-    line-height: 1.9;
-  }
-
-  .category-gallery {
-    grid-template-columns: 1fr;
-  }
-
-  .category-image {
-    height: 220px;
-  }
-
-  .category-card-content {
-    padding: 20px;
-  }
-
-}
 
 /* =========================
   産業機器分野
@@ -618,7 +549,82 @@
 }
 
 /* スマートフォン */
+
+/* =========================
+   スマートフォン
+========================= */
 @media screen and (max-width: 600px) {
+  /* 製品紹介 */
+  .products-section {
+    padding: 70px 20px;
+  }
+
+  .products-section > h2 {
+    font-size: 28px;
+  }
+
+  .product-list {
+    grid-template-columns: 1fr;
+  }
+
+  .product-card img {
+    height: 210px;
+  }
+
+  /* アルミ押出形材 */
+  .profile-section {
+    padding: 70px 20px;
+  }
+
+  .profile-section > h2 {
+    font-size: 28px;
+  }
+
+  .profile-introduction {
+    padding: 28px 20px;
+  }
+
+  .profile-title-area h3 {
+    font-size: 24px;
+  }
+
+  .profile-card-content {
+    padding: 20px;
+  }
+
+  /* 製品カテゴリー */
+  .category-section {
+    padding: 70px 20px;
+  }
+
+  .category-heading {
+    margin-bottom: 40px;
+  }
+
+  .category-heading h2 {
+    margin-bottom: 18px;
+    font-size: 28px;
+  }
+
+  .category-lead {
+    font-size: 18px;
+    line-height: 1.9;
+    white-space: normal;
+  }
+
+  .category-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .category-image {
+    height: 220px;
+  }
+
+  .category-card-content {
+    padding: 20px;
+  }
+
+  /* 製品カテゴリーナビ */
   .product-nav {
     position: static;
     padding: 25px 15px;

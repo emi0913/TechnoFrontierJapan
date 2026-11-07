@@ -38,6 +38,11 @@ p {
   margin-top: 0;
 }
 
+:root {
+  --section-spacing: 100px;
+  --section-spacing-sp: 70px;
+}
+
 /* =========================
   共通見出し
 ========================= */

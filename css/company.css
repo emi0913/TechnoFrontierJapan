@@ -46,6 +46,7 @@
 }
 
 .company-info .section-heading {
+  margin-bottom: 40px;
   text-align: center;
 }
 
@@ -54,7 +55,7 @@
 }
 
 .company-message .section-heading {
-  max-width: 960px;
+  max-width: 1180px;
   margin: 0 auto;
   padding: 48px 56px;
   text-align: center;
@@ -65,6 +66,7 @@
 
 .company-message .section-heading h2 {
   color: #244f54;
+  font-size: 36px;
 }
 
 .company-message .section-heading > p:last-child {
@@ -73,11 +75,6 @@
 
 /* =========================
   会社案内 メインビジュアル
-========================= */
-
-
-/* =========================
-  沿革
 ========================= */
 
 .company-main-visual {
@@ -92,88 +89,8 @@
     url("../images/factory/company-main.png") center / cover no-repeat;
 }
 
-.history {
-  padding: 100px 20px;
-  background-color: #f5f7f6;
-}
-
-.history-list {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  max-width: 960px;
-  margin: 0 auto;
-}
-
-.history-item {
-  display: flex;
-  gap: 34px;
-  padding: 24px 28px;
-  background-color: #fff;
-  border: 1px solid #dfe5e4;
-  border-left: 5px solid #3a7378;
-  box-shadow: 0 6px 20px rgba(36, 79, 84, 0.06);
-  align-items: center;
-}
-
-.history-item span {
-  min-width: 90px;
-  color: #3a7378;
-  font-size: 24px;
-  font-weight: bold;
-}
-
-.history-item p {
-  margin: 0;
-  color: #444;
-  line-height: 1.8;
-}
-
-.history .section-heading,
-.production-system .section-heading,
-.factory-facility .section-heading {
-  text-align: center;
-}
-
 /* =========================
-  スマホ
-========================= */
-
-@media screen and (max-width:768px){
-
-.company-message .section-heading {
-padding:36px 24px;
-}
-
-.company-info {
-padding:70px 20px;
-}
-
-.company-table th,
-.company-table td{
-display:block;
-width:100%;
-padding:16px 20px;
-font-size:15px;
-}
-
-.company-table th{
-border-bottom:none;
-}
-
-.company-table td{
-padding-top:0;
-}
-
-.history-item{
-flex-direction:column;
-gap:10px;
-align-items:flex-start;
-}
-}
-
-/* =========================
-   生産体制
+  韓国パートナー企業・生産体制
 ========================= */
 
 .production-system {
@@ -181,70 +98,29 @@ align-items:flex-start;
   background-color: #f5f7f6;
 }
 
-.production-main {
-  display: grid;
-  grid-template-columns: 1.1fr 1fr;
-  max-width: 1180px;
-  margin: 60px auto 0;
-  overflow: hidden;
-  background-color: #fff;
-  border: 1px solid #dfe5e4;
-  box-shadow: 0 10px 35px rgba(36, 79, 84, 0.1);
+.production-system > .content-inner > .section-heading {
+  margin-bottom: 45px;
 }
 
-.production-image {
-  min-height: 520px;
-  overflow: hidden;
+.partner-profile {
+  margin-top: 50px;
 }
 
-.production-image img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.partner-profile .section-heading {
+  margin-bottom: 30px;
 }
 
-.production-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 60px 50px;
+.partner-facilities {
+  margin-top: 75px;
 }
 
-.production-content h3 {
-  margin: 0 0 26px;
-  color: #244f54;
-  font-size: 30px;
-  line-height: 1.6;
+.partner-facilities .section-heading {
+  margin-bottom: 40px;
 }
 
-.production-content > p {
-  margin: 0 0 26px;
-  color: #4e5858;
-  font-size: 17px;
-  line-height: 2;
-}
-
-.production-content ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.production-content li {
-  position: relative;
-  padding: 12px 0 12px 28px;
-  color: #394444;
-  font-size: 16px;
-  font-weight: 600;
-  border-bottom: 1px solid #dfe5e4;
-}
-
-.production-content li::before {
-  position: absolute;
-  left: 0;
-  color: #9b7b50;
-  content: "●";
+.production-heading {
+  margin-top: 85px;
+  margin-bottom: 0;
 }
 
 .production-stats {
@@ -279,14 +155,17 @@ align-items:flex-start;
   font-size: 15px;
 }
 
-
 /* =========================
-   主要設備
+  主要設備
 ========================= */
 
 .factory-facility {
   padding: 100px 20px;
   background-color: #fff;
+}
+
+.factory-facility .section-heading {
+  margin-bottom: 40px;
 }
 
 .facility-list {
@@ -350,6 +229,82 @@ align-items:flex-start;
   line-height: 2;
 }
 
+/* =========================
+  沿革
+========================= */
+
+.history {
+  padding: 100px 20px;
+  background-color: #f5f7f6;
+}
+
+.history .section-heading {
+  margin-bottom: 40px;
+}
+
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.history-item {
+  display: flex;
+  gap: 34px;
+  padding: 24px 28px;
+  background-color: #fff;
+  border: 1px solid #dfe5e4;
+  border-left: 5px solid #3a7378;
+  box-shadow: 0 6px 20px rgba(36, 79, 84, 0.06);
+  align-items: center;
+}
+
+.history-item span {
+  min-width: 90px;
+  color: #3a7378;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.history-item p {
+  margin: 0;
+  color: #444;
+  line-height: 1.8;
+}
+
+/* =========================
+  セクションタイトル
+========================= */
+
+.company-info .section-heading,
+.history .section-heading,
+.production-system .section-heading,
+.factory-facility .section-heading {
+  text-align: center;
+}
+
+.company-info .section-heading h2,
+.history .section-heading h2,
+.production-system .section-heading h2,
+.factory-facility .section-heading h2 {
+  font-size: 36px;
+}
+
+/* =========================
+  本文文字サイズ
+========================= */
+
+.company-table th,
+.company-table td,
+.company-message .section-heading > p:last-child,
+.production-system p,
+.facility-content > p:last-child,
+.history-item p {
+  font-size: 18px;
+  line-height: 2;
+}
 
 /* =========================
   タブレット
@@ -357,53 +312,94 @@ align-items:flex-start;
 
 @media screen and (max-width: 900px) {
 
-  .production-main {
+  .facility-list {
     grid-template-columns: 1fr;
+    max-width: 650px;
   }
 
-  .production-image {
-    min-height: 400px;
+}
+
+/* =========================
+  スマートフォン
+========================= */
+
+@media screen and (max-width: 768px) {
+
+  /* ごあいさつ */
+
+  .company-message .section-heading {
+    padding: 36px 24px;
   }
+
+  /* 日本法人・韓国企業概要 */
+
+  .company-info {
+    padding: 70px 20px;
+  }
+
+  .company-table th,
+  .company-table td {
+    display: block;
+    width: 100%;
+    padding: 16px 20px;
+    font-size: 15px;
+  }
+
+  .company-table th {
+    border-bottom: none;
+  }
+
+  .company-table td {
+    padding-top: 0;
+  }
+
+  /* 韓国パートナー企業 */
+
+  .production-system {
+    padding: 80px 20px;
+  }
+
+  .production-system > .content-inner > .section-heading {
+    margin-bottom: 35px;
+  }
+
+  .partner-profile {
+    margin-top: 40px;
+  }
+
+  .partner-facilities {
+    margin-top: 55px;
+  }
+
+  .partner-facilities .section-heading {
+    margin-bottom: 30px;
+  }
+
+  .production-heading {
+    margin-top: 65px;
+  }
+
+  /* 生産拠点・主要設備 */
 
   .facility-list {
     grid-template-columns: 1fr;
+    gap: 22px;
+    margin-top: 35px;
   }
 
   .facility-image {
-    height: 380px;
-  }
-}
-
-
-/* =========================
-   スマートフォン
-========================= */
-
-@media screen and (max-width: 600px) {
-
-  .production-system,
-  .factory-facility {
-    padding: 80px 20px;
+    height: 260px;
   }
 
-  .history {
-    padding: 80px 20px;
+  .facility-content {
+    padding: 25px 22px 30px;
   }
 
-  .production-image {
-    min-height: 280px;
-  }
-
-  .production-content {
-    padding: 38px 24px;
-  }
-
-  .production-content h3 {
-    font-size: 25px;
-  }
+  /* 生産能力 */
 
   .production-stats {
     grid-template-columns: 1fr;
+    margin-top: 30px;
   }
 
   .production-stat {
@@ -415,7 +411,40 @@ align-items:flex-start;
     border-bottom: none;
   }
 
-  .facility-image {
-    height: 260px;
+  /* 主要設備 */
+
+  .factory-facility {
+    padding: 80px 20px;
   }
+
+  .factory-facility .section-heading {
+    margin-bottom: 30px;
+  }
+
+  /* 沿革 */
+
+  .history {
+    padding: 80px 20px;
+  }
+
+  .history .section-heading {
+    margin-bottom: 30px;
+  }
+
+  .history-item {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  /* タイトル */
+
+  .company-message .section-heading h2,
+  .company-info .section-heading h2,
+  .history .section-heading h2,
+  .production-system .section-heading h2,
+  .factory-facility .section-heading h2 {
+    font-size: 28px;
+  }
+
 }
